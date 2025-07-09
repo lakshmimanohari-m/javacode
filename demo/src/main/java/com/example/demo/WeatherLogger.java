@@ -53,7 +53,7 @@ public class WeatherLogger {
     }
 
     public static void logToFile(String data) throws IOException {
-        FileWriter writer = new FileWriter("C:\\Users\\Admin\\javacode\\demo\\src\\main\\java\\com\\example\\demo\\weather_log.txt", true);
+        FileWriter writer = new FileWriter("C:\\Users\\Admin\\javacode\\demo\\src\\main\\resources\\weather_log.txt", true);
         BufferedWriter bufferedWriter = new BufferedWriter(writer);
         bufferedWriter.write("==== Weather Log Entry ====\n");
         bufferedWriter.write(data);

@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class FileProcessor {
 
     public static void main(String[] args) {
-        String filename = "C:\\Users\\Admin\\icanio-intern-spring-boot\\demo\\src\\main\\java\\com\\example\\demo\\Numbers.txt";
+        String filename = "C:\\Users\\Admin\\javacode\\demo\\src\\main\\resources\\Numbers.txt";
         processFile(filename);
     }
 
