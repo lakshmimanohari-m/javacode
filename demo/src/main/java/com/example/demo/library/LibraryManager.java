@@ -1,7 +1,7 @@
-package library;
+package com.example.demo.library;
 
-import library.Book;
-import library.User;
+import model.Book;
+
 public class LibraryManager {
     public void issueBook(Book book, User user) {
         System.out.println("Issuing " + book + " to " + user);

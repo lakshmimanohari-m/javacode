@@ -4,22 +4,35 @@ import java.util.Scanner;
 
 public class Analyser {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter text:");
-        String input=sc.nextLine().toLowerCase().trim();
+        Scanner sc = new Scanner(System.in);
+        try {
+            System.out.println("Enter text:");
+            String input = sc.nextLine().toLowerCase().trim();
+            if (input.isEmpty()) {
+                throw new IllegalArgumentException("Input cannot be empty");
+            }
 
-        String[] words=cleanAndSplit(input);
-        int[] counts=countFrequencies(words);
+            String[] words = cleanAndSplit(input);
+            int[] counts = countFrequencies(words);
 
-        printFrequencies(words, counts);
+            printFrequencies(words, counts);
 
-        int wordCount=words.length;
-        int charCount=input.length();
-        int sentenceCount=input.split("[.!?]+").length;
+            int wordCount = words.length;
+            int charCount = input.length();
+            int sentenceCount = input.split("[.!?]+").length;
 
-        System.out.println("\nWords: "+wordCount);
-        System.out.println("Sentences: "+sentenceCount);
-        System.out.println("Characters: "+charCount);
+            System.out.println("\nWords: " + wordCount);
+            System.out.println("Sentences: " + sentenceCount);
+            System.out.println("Characters: " + charCount);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error:" + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Unexpected error occured" + e.getMessage());
+        } finally {
+            sc.close();
+
+        }
+
     }
 
     static String[] cleanAndSplit(String text) {

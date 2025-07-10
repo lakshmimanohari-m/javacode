@@ -1,8 +1,6 @@
-package library;
+package com.example.demo.library;
 
-import library.Book;
-import library.User;
-import library.LibraryManager;
+import model.Book;
 
 public class Main {
     public static void main(String[] args) {
