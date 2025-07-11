@@ -23,9 +23,9 @@ public class CustomStack {
             return -1;
         }
         --size;
-        int result = stack[size] + inc[size];
-        if (size > 0) {
-            inc[size - 1] =size-1+ inc[size];
+        int result=stack[size]+inc[size];
+        if(size>0) {
+            inc[size - 1]=size-1+inc[size];
         }
         inc[size] = 0;
         return result;

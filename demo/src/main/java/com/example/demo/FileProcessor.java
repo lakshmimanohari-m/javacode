@@ -16,15 +16,15 @@ public class FileProcessor {
         int count = 0;
 
         try {
-            Scanner scanner = new Scanner(file);
+            Scanner scanner=new Scanner(file);
 
             while (scanner.hasNextLine()) {
-                String line = scanner.nextLine().trim();
-                if (line.isEmpty()) continue;
+                String line=scanner.nextLine().trim();
+                if (line.isEmpty())continue;
 
-                Double number = parseNumber(line);
-                if (number != null) {
-                    sum += number;
+                Double number=parseNumber(line);
+                if (number!=null) {
+                    sum+=number;
                     count++;
                 }
             }
@@ -51,7 +51,7 @@ public class FileProcessor {
 
     public static void printResults(double sum, int count) {
         if (count > 0) {
-            double average = sum / count;
+            double average=sum/count;
             System.out.println("Total numbers: " + count);
             System.out.println("Sum: " + sum);
             System.out.println("Average: " + average);
