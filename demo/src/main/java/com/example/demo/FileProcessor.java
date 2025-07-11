@@ -34,7 +34,7 @@ public class FileProcessor {
             printResults(sum, count);
 
         } catch (FileNotFoundException e) {
-            System.out.println("Error: File '" + filename + "' not found.");
+            System.out.println("Error: File '" + filename + "' not found");
         } catch (Exception e) {
             System.out.println("Unexpected error: " + e.getMessage());
         }
@@ -44,7 +44,7 @@ public class FileProcessor {
         try {
             return Double.parseDouble(line);
         } catch (NumberFormatException e) {
-            System.out.println("Invalid number format, skipping: " + line);
+            System.out.println("Invalid number format, skipping " + line);
             return null;
         }
     }

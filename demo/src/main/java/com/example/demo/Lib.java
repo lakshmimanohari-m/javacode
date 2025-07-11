@@ -1,10 +1,10 @@
-package library;
+package com.example.demo;
 
-import library.Book;
-import library.User;
-import library.LibraryManager;
+import service.LibraryManager;
+import model.User;
+import model.Book;
 
-public class Main {
+public class Lib {
     public static void main(String[] args) {
         Book book = new Book("1984", "George Orwell");
         User user = new User("Alice");

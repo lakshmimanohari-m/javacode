@@ -7,10 +7,25 @@ public class Calculator {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter first number:");
         String input1 = scanner.nextLine();
+        if(isNullOrBlank(input1)){
+            System.out.println("First input number is empty.");
+            scanner.close();
+            return;
+        }
         System.out.println("Enter second number: ");
         String input2 = scanner.nextLine();
+        if(isNullOrBlank(input2)){
+            System.out.println("Second number input is empty.");
+            scanner.close();
+            return;
+        }
         System.out.println("Enter operator:");
         String operator = scanner.nextLine();
+        if(isNullOrBlank(operator)){
+            System.out.println("Operator input is empty.");
+            scanner.close();
+            return;
+        }
 
         try {
             double num1 = parseToDouble(input1);
@@ -48,5 +63,8 @@ public class Calculator {
     }
     public static double parseToDouble (String input)throws NumberFormatException {
         return Double.parseDouble(input.trim());
+    }
+    public static boolean isNullOrBlank(String str){
+        return str==null||str.trim().isEmpty();
     }
 }
